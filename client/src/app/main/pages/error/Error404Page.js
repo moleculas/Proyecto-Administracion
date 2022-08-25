@@ -12,7 +12,6 @@ function Error404Page() {
         >
           <img className="" src="assets/images/pages/404.jpg" alt="404" />
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
@@ -24,7 +23,6 @@ function Error404Page() {
             Ooops... Error 404
           </Typography>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
@@ -37,7 +35,6 @@ function Error404Page() {
             No se pudo encontrar la página solicitada.
           </Typography>
         </motion.div>
-
         <Link className="block font-normal mt-48" to="/apps/dashboards/project">
           Volver al Inicio
         </Link>

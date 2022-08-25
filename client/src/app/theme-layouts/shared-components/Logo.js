@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 const Root = styled('div')(({ theme }) => ({
   '& > .logo-icon': {
@@ -20,10 +21,14 @@ function Logo() {
     <Root className="flex items-center">
       <img className="logo-icon w-32 h-32" src="assets/images/logo/logo.svg" alt="logo" />
       {/* Texto superior menú lateral */}
-      {/* <div
-        className="badge flex items-center py-4 px-8 mx-8 rounded"
-        style={{ backgroundColor: '#121212', color: '#61DAFB' }}
-      ></div> */}
+      {/* <div className="ml-6">
+        <Typography className="username text-14 whitespace-nowrap font-medium leading-3" >
+          J.A.L.P.
+        </Typography>
+        <Typography variant="caption" className="text-11 whitespace-nowrap" >
+          MAD TECHNOLOGIC SL
+        </Typography>
+      </div> */}
     </Root>
   );
 }

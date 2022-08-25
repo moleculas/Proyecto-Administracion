@@ -44,14 +44,12 @@ function ForgotPasswordPage() {
       <Paper className="h-full sm:h-auto md:flex md:items-center md:justify-end w-full sm:w-auto md:h-full md:w-1/2 py-8 px-16 sm:p-48 md:p-64 sm:rounded-2xl md:rounded-none sm:shadow md:shadow-none ltr:border-r-1 rtl:border-l-1">
         <div className="w-full max-w-320 sm:w-320 mx-auto sm:mx-0">
           <img className="w-48" src="assets/images/logo/logo.svg" alt="logo" />
-
           <Typography className="mt-32 text-4xl font-extrabold tracking-tight leading-tight">
             ¿Olvidaste la contraseña?
           </Typography>
           <div className="flex items-baseline mt-2 font-medium">
             <Typography>Rellena el formulario para restablecer tu contraseña</Typography>
           </div>
-
           <form
             name="registerForm"
             noValidate
@@ -75,7 +73,6 @@ function ForgotPasswordPage() {
                 />
               )}
             />
-
             <Button
               variant="contained"
               color="secondary"
@@ -87,7 +84,6 @@ function ForgotPasswordPage() {
             >
               Enviar enlace
             </Button>
-
             <Typography className="mt-32 text-md font-medium" color="text.secondary">
               <span>Volver a</span>
               <Link className="ml-4" to="/sign-in">
@@ -97,7 +93,6 @@ function ForgotPasswordPage() {
           </form>
         </div>
       </Paper>
-
       <Box
         className="relative hidden md:flex flex-auto items-center justify-center h-full p-64 lg:px-112 overflow-hidden"
         sx={{ backgroundColor: 'primary.main' }}
@@ -145,7 +140,6 @@ function ForgotPasswordPage() {
           </defs>
           <rect width="220" height="192" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
         </Box>
-
         <div className="z-10 relative w-full max-w-2xl">
           <div className="text-7xl font-bold leading-none text-gray-100">
             <div>Gestión</div>
