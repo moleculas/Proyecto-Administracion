@@ -13,6 +13,7 @@ import EliminarUsuarioTab from './tabs/EliminarUsuarioTab';
 import withReducer from 'app/redux/withReducer';
 import reducer from 'app/redux/registrar-usuario';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 
 //importación acciones
 import { obtenerUsuarios, usuariosSeleccionados } from 'app/redux/usuariosSlice';
@@ -56,9 +57,14 @@ function GestionUsuariosPage() {
                 </Typography>
               </div>
             </div>
-            <div className="mt-8 sm:px-40">
-              <Typography className="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                Gestión usuarios
+            <div className="mt-8 sm:px-40 flex items-center">
+              <Typography
+                component={motion.span}
+                initial={{ x: -20 }}
+                animate={{ x: 0, transition: { delay: 0.2 } }}
+                delay={300}
+                className="text-24 md:text-32 font-extrabold tracking-tight leading-none"
+              >
               </Typography>
             </div>
             <div className="flex flex-col shadow mt-24 sm:mt-32 bg-white border !border-[#e2e8f0]/[.50] border-t-0 border-l-0 border-r-0 border-b-1">

@@ -2,6 +2,7 @@ Settings inicials color: settingsConfig.js i a themesConfig.js
 Generador de paletes de colors: https://material.io/resources/color/#!/?view.left=0&view.right=1
 -Canviar logo a: Logo.js, FuseSplashScreen.js, NavbarStyle1Content.js, index.html
 -Canviar Auth Roles a: settingsConfig.js, authRoles.js
+-Canviar títol general a: index.html (2 vegades a title i content), gestionMail.js, registrarUsuarioSlice.js
 
 Els default settings s'agafen de qualsevol lloc:
 
