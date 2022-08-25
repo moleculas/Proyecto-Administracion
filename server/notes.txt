@@ -1,0 +1,33 @@
+URI DE REDIRECCIONAMIENTO AUTORIZADO:
+https://developers.google.com/oauthplayground
+id de cliente: 523006689296-0vlbabnppbtmcn3jae91kc43hcfg2md5.apps.googleusercontent.com
+id secret: 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
+refresh token: 1//04iI1UpmsIMoLCgYIARAAGAQSNwF-L9Ir18U2JA4oZL-mbkSm6tBvhHuBaW2v8JHPeV5tJBE0cxAEw9o6eVlv2opC_8Ag8Sr_O58
+AUTHORIZE API
+https://mail.google.com/
+authoritation code: 4/0AdQt8qidqXVR_gJoUm2B3pepYSCMhiP7aYFpdYwQMF0EnQ15cwRHOvtRQTuvMsKHkd7y2A
+access token: ya29.A0AVA9y1uofvVTmPLoziVJoQpYmyeYEbnF0rI1HI8TLXu2K9c8Fetvh0--N_TBwOvutQDkxvWH-Y-lIlwX7KIAVVFr0tMSX5OLHNJdjKGOlT5GToG6OyW0Sz7013h5ESmNGIertbiCVo-6BwzAX3OvsbL6V9DZYUNnWUtBVEFTQVRBU0ZRRTY1ZHI4dU5hSWthTTVZeVQ0ekJwY3VFRUVtQQ0163
+DESACTIVAR ANTIVIRUS EN LOCAL!!!
+
+Recordar PUBLICAR LA APLICACIÓN si no queda en modo test i els tokens es revonken:
+https://console.cloud.google.com/apis/credentials/consent?hl=es&project=mailer-sender-356220
+PUBLICAR LA APLICACIÓN
+
+Sendinblue:
+artikawebmail@gmail.com
+Abuelo5566!
+Recordar omplir totes les dades per activar compte!
+
+API
+sender-mail-node
+key: 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
+
+SEQÜÈNCI-INICI
+
+1.-Importar a la bbdd els arxius de la carpeta inicio_bbdd
+2.-Crear etiquetes per notes i events
+3.-Crear compte google 
+4.-Crear compte a sendinblue, omplir totes les dades però no activar API fins que no estigui al server
+
+
+

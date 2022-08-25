@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "62dfd52e5dabac88fc757aee"
+  },
+  "usuario": {
+    "$oid": "62dbceb4bdec061a6e92d719"
+  },
+  "name": "Isaías Herrero Florensa",
+  "email": "isaias@artikaweb.com",
+  "avatar": "assets/images/avatars/no-user.png",
+  "about": "¡Hola!, estoy usando el chat de la aplicación.",
+  "status": "do-not-disturb",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658836270150"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661337110405"
+    }
+  }
+}]

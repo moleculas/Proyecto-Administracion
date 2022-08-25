@@ -1,0 +1,44 @@
+Els default settings s'agafen de qualsevol lloc:
+
+ sx={{
+       backgroundColor: 'background.default',
+    }}
+
+Les dades corresponen a: 
+E:\source\REACT-2\Admin-proyecto1\Client-Proyecto1\src\app\configs\themesConfig.js
+
+//docs
+https://date-fns.org/v2.29.1/docs/
+https://date-fns.org/v2.29.1/docs/format
+https://tailwindcss.com/docs/installation
+https://react-hook-form.com/
+https://fullcalendar.io/docs/react
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
+//issues
+full calendar maximum depth on reload (resolt)
+https://github.com/fullcalendar/fullcalendar-react/issues/185
+https://github.com/fullcalendar/fullcalendar/pull/6917
+
+//actualitzar menú item
+
+  useEffect(() => {
+    if (remainingTasks) {
+      const objetoNavigation = {
+        id: 'apps.tasks',
+        icon: 'heroicons-outline:check-circle',
+        subtitle: remainingTasks + " tareas faltan por completar",
+        title: 'Tareas',
+        type: 'item',
+        url: "/apps/tasks"
+      }
+      dispatch(updateNavigationItem('apps.tasks', objetoNavigation))
+    };
+  }, [remainingTasks]);
+
+  //scroll page
+     scroll={isMobile ? 'normal' : 'page'} normal, page, content
+
+ // responsive query ocultar-mostrar
+ <div className="mr-8 mt-8 hidden md:flex">
+
