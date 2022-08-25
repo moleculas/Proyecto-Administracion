@@ -10,23 +10,20 @@ import reducer from 'app/redux/actividad';
 
 //importación acciones
 import { getItems, selectActividadesGestionadas } from 'app/redux/actividad/actividadSlice';
-import { usuariosSeleccionados, obtenerUsuarios } from 'app/redux/usuariosSlice';
+import { obtenerUsuarios } from 'app/redux/usuariosSlice';
 
 function ActivitiesPage() {
   const dispatch = useDispatch();
   const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
-  const usuarios = useSelector(usuariosSeleccionados);
   const actividades = useSelector(selectActividadesGestionadas);
 
   //useEffect
 
   useEffect(() => {
-    if (usuarios.length === 0) {
-      dispatch(obtenerUsuarios(true)).then(() => {
-        dispatch(getItems());
-      });
-    };
-  }, [usuarios]);
+    dispatch(obtenerUsuarios(true)).then(() => {
+      dispatch(getItems());
+    });
+  }, [dispatch]);
 
   return (
     <FusePageSimple

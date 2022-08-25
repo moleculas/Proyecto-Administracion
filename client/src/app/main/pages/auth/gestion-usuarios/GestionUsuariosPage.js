@@ -7,14 +7,15 @@ import useThemeMediaQuery from '@fuse/hooks/useThemeMediaQuery';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Box from '@mui/material/Box';
-
-//componentes
+import { useEffect } from 'react';
 import RegistrarUsuarioTab from './tabs/RegistrarUsuarioTab';
 import EliminarUsuarioTab from './tabs/EliminarUsuarioTab';
-
-//redux
 import withReducer from 'app/redux/withReducer';
 import reducer from 'app/redux/registrar-usuario';
+import { useDispatch, useSelector } from 'react-redux';
+
+//importación acciones
+import { obtenerUsuarios, usuariosSeleccionados } from 'app/redux/usuariosSlice';
 
 const Root = styled(FusePageCarded)({
   '& .FusePageCarded-header': {},
@@ -25,10 +26,16 @@ const Root = styled(FusePageCarded)({
 });
 
 function GestionUsuariosPage() {
-  const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));  
+  const dispatch = useDispatch();
+  const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
   const [selectedTab, setSelectedTab] = useState(0);
- 
+  const usuarios = useSelector(usuariosSeleccionados);
+
   //useEffect
+
+  useEffect(() => {
+    dispatch(obtenerUsuarios(true));
+  }, [dispatch]);
 
   //funciones
 
@@ -36,7 +43,7 @@ function GestionUsuariosPage() {
     setSelectedTab(value);
   };
 
-    return (
+  return (
     <Root
       scroll={isMobile ? 'normal' : 'content'}
       header={
@@ -80,11 +87,13 @@ function GestionUsuariosPage() {
                       disableRipple
                       label="Registrar usuario"
                     />
-                    <Tab
-                      className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12 "
-                      disableRipple
-                      label="Eliminar usuario"
-                    />
+                    {usuarios.length > 0 && (
+                      <Tab
+                        className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12 "
+                        disableRipple
+                        label="Eliminar usuario"
+                      />
+                    )}
                   </Tabs>
                 </div>
               </div>
@@ -94,9 +103,9 @@ function GestionUsuariosPage() {
       }
       content={
         <div className="flex flex-auto justify-center w-full mx-auto p-24 sm:p-32">
-        {selectedTab === 0 && <RegistrarUsuarioTab />}
-        {selectedTab === 1 && <EliminarUsuarioTab />}
-      </div>
+          {selectedTab === 0 && <RegistrarUsuarioTab />}
+          {selectedTab === 1 && <EliminarUsuarioTab />}
+        </div>
       }
     />
   );

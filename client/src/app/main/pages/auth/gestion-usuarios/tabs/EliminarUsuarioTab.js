@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -21,7 +21,7 @@ import Paper from '@mui/material/Paper';
 //importaciones acciones
 import { closeDialog, openDialog } from 'app/redux/fuse/dialogSlice';
 import { eliminarUsuario } from 'app/redux/userSlice';
-import { usuariosSeleccionados, obtenerUsuarios } from 'app/redux/usuariosSlice';
+import { usuariosSeleccionados } from 'app/redux/usuariosSlice';
 
 function EliminarUsuarioTab() {
   const dispatch = useDispatch();
@@ -40,15 +40,7 @@ function EliminarUsuarioTab() {
   const item = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0 },
-  };
-
-  //useEffect
-
-  useEffect(() => {
-    if (usuarios.length === 0) {
-      dispatch(obtenerUsuarios(true));
-    };
-  }, [usuarios]);
+  };  
 
   //funciones
 
