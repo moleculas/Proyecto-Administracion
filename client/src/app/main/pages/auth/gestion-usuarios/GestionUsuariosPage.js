@@ -50,14 +50,14 @@ function GestionUsuariosPage() {
       header={
         <div className="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between pt-24 sm:pt-32 w-full">
           <div className="flex-1 min-w-0">
-            <div className="flex flex-wrap items-center font-medium sm:px-40">
+            <div className="flex flex-wrap items-center font-medium px-20 sm:px-40">
               <div>
                 <Typography className="whitespace-nowrap" color="secondary.main">
                   Área de gestión usuario administrador
                 </Typography>
               </div>
             </div>
-            <div className="mt-8 sm:px-40 flex items-center">
+            <div className="mt-8 px-20 sm:px-40 flex items-center">
               <Typography
                 component={motion.span}
                 initial={{ x: -20 }}
@@ -65,11 +65,12 @@ function GestionUsuariosPage() {
                 delay={300}
                 className="text-24 md:text-32 font-extrabold tracking-tight leading-none"
               >
+                Gestión usuarios
               </Typography>
             </div>
             <div className="flex flex-col shadow mt-24 sm:mt-32 bg-white border !border-[#e2e8f0]/[.50] border-t-0 border-l-0 border-r-0 border-b-1">
-              <div className="flex flex-col flex-0 sm:flex-row items-center w-full mx-auto px-32 lg:h-72">
-                <div className="flex flex-1 justify-start my-16 lg:my-0">
+              <div className="flex flex-row items-center w-full mx-auto px-32 lg:h-72">
+                <div className="my-16 lg:my-0">
                   <Tabs
                     value={selectedTab}
                     onChange={handleTabChange}
