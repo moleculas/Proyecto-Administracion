@@ -6,7 +6,9 @@ const TasksApp = lazy(() => import('./TasksApp'));
 const TasksAppConfig = {
   settings: {
     layout: {
-      config: {},
+      config: {
+        containerWidth: '100%',
+      },
     },
   },
   routes: [

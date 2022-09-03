@@ -48,3 +48,36 @@ https://github.com/fullcalendar/fullcalendar/pull/6917
  // responsive query ocultar-mostrar
  <div className="mr-8 mt-8 hidden md:flex">
 
+//estils
+
+const Root = styled('div')(({ theme }) => ({
+  '& .FusePageSimple-header': {},
+
+  '&.scroll-normalScroll': {
+    '& .preview-wrapper': {
+      overflow: 'auto',
+    },
+
+    '& .preview-component': {
+      minHeight: 'auto',
+    },
+  },
+  '&.scroll-pageScroll': {
+    '& .preview-component': {
+      minHeight: '0',
+      overflow: 'auto',
+      '& .FusePageSimple-root': {
+        minHeight: 'auto',
+      },
+      '& .FusePageCarded-root': {
+        minHeight: 'auto',
+      },
+    },
+  },
+  '&.scroll-contentScroll': {
+    '& .preview-component': {
+      minHeight: '0',
+    },
+  },
+}));
+

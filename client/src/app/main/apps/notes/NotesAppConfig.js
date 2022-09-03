@@ -5,7 +5,9 @@ const NotesApp = lazy(() => import('./NotesApp'));
 const NotesAppConfig = {
   settings: {
     layout: {
-      config: {},
+      config: {
+        containerWidth: '100%',
+      },
     },
   },
   routes: [
