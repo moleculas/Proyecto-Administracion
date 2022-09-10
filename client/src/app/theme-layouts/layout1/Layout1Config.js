@@ -3,7 +3,7 @@ const config = {
   defaults: {
     mode: 'container',
     //containerWidth: 1570,
-    containerWidth: 1640,
+    containerWidth: 6640,
     navbar: {
       display: true,
       style: 'style-1',
