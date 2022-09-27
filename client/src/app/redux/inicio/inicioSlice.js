@@ -36,11 +36,10 @@ export const getEventsInicio = createAsyncThunk(
     });
 
 export const getTasksInicio = createAsyncThunk(
-    'inicioPage/getTasksInicio',
+    'produccionSeccion/inicio/getTasksInicio',
     async (_, { getState, dispatch }) => {
-        const user = getState().user;
         try {
-            const response = await axios.get('/tasks/mes/' + user.data.id);
+            const response = await axios.get('/tasks/mes');
             const data = await response.data;
             return data;
         } catch (err) {
@@ -465,7 +464,7 @@ const inicioSlice = createSlice({
         [getTasksInicio.fulfilled]: (state, action) => {
             state.header.tasksInicio = action.payload;
         },
-        [getChatsInicio.fulfilled]: (state, action) => {            
+        [getChatsInicio.fulfilled]: (state, action) => {
             state.menu.chatsPendientes = action.payload;
         },
     },
@@ -474,6 +473,6 @@ const inicioSlice = createSlice({
 //export const usuariosSeleccionados = ({ usuarios: _usuarios }) => _usuarios.usuarios;
 export const selectDataInicioHeader = ({ inicioPage }) => inicioPage.inicio.header;
 export const selectDataInicioWidgets = ({ inicioPage }) => inicioPage.inicio.widgets;
-export const selectDataInicioMenu = ({ inicioPage }) =>  inicioPage.inicio.menu;
+export const selectDataInicioMenu = ({ inicioPage }) => inicioPage.inicio.menu;
 
 export default inicioSlice.reducer;
