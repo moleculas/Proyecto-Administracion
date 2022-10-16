@@ -44,6 +44,10 @@ function GestionUsuariosPage() {
     setSelectedTab(value);
   };
 
+  if (!usuarios) {
+    return null
+  };
+
   return (
     <Root
       scroll={isMobile ? 'normal' : 'content'}
@@ -94,7 +98,7 @@ function GestionUsuariosPage() {
                       disableRipple
                       label="Registrar usuario"
                     />
-                    {usuarios.length > 0 && (
+                    {(usuarios && usuarios.length > 0) && (
                       <Tab
                         className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12 "
                         disableRipple

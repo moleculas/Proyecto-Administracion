@@ -20,7 +20,7 @@ function ActivitiesPage() {
   //useEffect
 
   useEffect(() => {
-    dispatch(obtenerUsuarios(true)).then(() => {
+    dispatch(obtenerUsuarios(false)).then(() => {
       dispatch(getItems());
     });
   }, [dispatch]);
